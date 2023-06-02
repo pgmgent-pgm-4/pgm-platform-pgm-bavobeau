@@ -6,7 +6,7 @@ const mutationCreateCommunity = `
 mutation CreateCommunityMutation($name: String!, $description: String!, $type: CommunityType!, $authUserId: ID) {
   __typename
   createCommunity(
-    data: {name: $name, description: $description, type: $type, authUser: {connect: {id: $authUserId}}}
+    data: {name: $name, description: $description, type: $type, authUsers: {connect: {id: $authUserId}}}
   ) {
     id
     name
