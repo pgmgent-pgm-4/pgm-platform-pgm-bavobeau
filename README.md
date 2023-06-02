@@ -1,1 +1,35 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/8rADGrFm)
+# graphcms-boilerplate
+GraphCMS Boilerplate
+
+## Client
+
+`.env` file under the client folder with the following content:
+
+```
+REACT_APP_NODE_ENV=development
+REACT_APP_HYGRAPH_CONTENT_API=
+REACT_APP_HYGRAPH_ACCESS_TOKEN=e
+REACT_APP_AUTH_KEY_LOCALSTORAGE=react-boilerplate-pgm-4:currentUser
+```
+## Seeder
+
+`development.env` file under server folder with the following content:
+
+```
+NODE_ENV=development
+HYGRAPH_CONTENT_API=
+HYGRAPH_ACCESS_TOKEN=
+```
+
+## Server
+
+`development.env` file under server folder with the following content:
+
+```
+NODE_ENV=development
+HOST=127.0.0.1
+POST=8080
+JWT_SECRET=
+JWT_EXPIRE=24h
+HYGRAPH_CONTENT_API=
+```
