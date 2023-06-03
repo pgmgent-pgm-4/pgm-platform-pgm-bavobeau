@@ -4,10 +4,9 @@ export const GET_ALL_COMMUNITIES = gql`
 query GetAllCommunities {
   communities {
     name
-    id
     description
-    createdAt
-    authUser {
+    type
+    authUsers {
       username
     }
   }
