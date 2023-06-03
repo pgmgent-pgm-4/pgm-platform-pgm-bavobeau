@@ -6,10 +6,11 @@ import client from './graphql_client';
 
 const mutationCreateCategory = `
 mutation createCategory($name: String = "", $description: String = "") {
+  __typename
   createCategory(
     data: {name: $name, description: $description }){
-      id
       name
+      slug
       description
       parentCategory {
         id
@@ -22,7 +23,7 @@ mutation createCategory($name: String = "", $description: String = "") {
 
 (async () => {
   /*
-   * Create a Tag (Local Provider)
+   * Create a Category (Local Provider)
   */
   const createCategory = async ({ name, description, parentCategoryId = null}) => {
     try {

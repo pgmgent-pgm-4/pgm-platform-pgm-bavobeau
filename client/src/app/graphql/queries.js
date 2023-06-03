@@ -81,7 +81,7 @@ query GetPostById ($postId: ID!) {
     tags {
       name
     }
-    category {
+    categories {
       name
     }
   }
