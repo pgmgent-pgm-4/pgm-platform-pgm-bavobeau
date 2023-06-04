@@ -15,9 +15,14 @@ const routes = [
     path: '/posts'
   },
   {
-    title: 'Contact',
+    title: 'Programme',
     type: 'internal',
-    path: '/contact'
+    path: '/programme'
+  },
+  {
+    title: 'Opleiding',
+    type: 'internal',
+    path: '/opleiding'
   }
 ];
 
@@ -35,7 +40,6 @@ const Navigation = () => {
             </NavLink>
           </NavItem>
         )}
-       
       </Nav>
       <Nav>
         <UserContextNavigation/>

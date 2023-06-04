@@ -8,3 +8,5 @@ export const AUTH_SIGN_IN = '/auth/signin';
 export const USER = '/user';
 export const USER_PROFILE = '/user/profile';
 export const FOUROFOUR = '/404';
+
+export const EDUCATION_PROGRAMME = '/programme';
