@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 
+import { PostsListHome } from "../components/posts";
+
 const HomePage = () => {
   return (
     <div className="container py-4">
@@ -14,6 +16,8 @@ const HomePage = () => {
           </NavLink>
         </div>
       </div>
+      <PostsListHome></PostsListHome>
+      
     </div>
   );
 };

@@ -22,6 +22,16 @@ query GetAllPosts {
 }
 `;
 
+export const GET_POSTS_BY_AMOUNT = gql`
+query MyQuery($first: Int = 3) {
+  posts(first: $first) {
+    id
+    title
+    thumbnailUrl
+  }
+}
+`;
+
 export const GET_POSTS_WITH_RELAY_CURSOR = gql`
 query GetPostsWithRelayCursor($first: Int = 20, $after: String = null) {
   postsConnectionRelayCursor: postsConnection(first: $first, after: $after) {
