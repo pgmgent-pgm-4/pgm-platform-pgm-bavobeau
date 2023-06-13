@@ -5,9 +5,14 @@ import { UserContextNavigation } from '../auth';
 
 const routes = [
   {
-    title: 'Communities',
+    title: 'Programme',
     type: 'internal',
-    path: '/communities'
+    path: '/programme'
+  },
+  {
+    title: 'Portfolios',
+    type: 'internal',
+    path: '/portfolios'
   },
   {
     title: 'Posts',
@@ -15,14 +20,14 @@ const routes = [
     path: '/posts'
   },
   {
-    title: 'Programme',
+    title: 'Services',
     type: 'internal',
-    path: '/programme'
+    path: '/services'
   },
   {
-    title: 'Opleiding',
+    title: 'Team',
     type: 'internal',
-    path: '/opleiding'
+    path: '/team'
   }
 ];
 
