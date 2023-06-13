@@ -17,7 +17,12 @@ const PostsListHome = () => {
   });
   
   const gqlResultAsJSX = () => {
-    if (loading) return <p>Loading...</p>;
+    if (loading) return (
+      <div className="spinner-border" role="status">
+        <strong>Loading...</strong>
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    );
     if (error) return <p>{error.toString()}</p>;
 
     return (
