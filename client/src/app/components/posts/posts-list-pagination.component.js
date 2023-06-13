@@ -60,7 +60,7 @@ const PostsListPagination = ({}) => {
       }}>
         Load more...
       </Button> */}
-      <Pagination
+      {/* <Pagination
         aria-label="Paged posts"
         size="sm"
       >
@@ -77,7 +77,7 @@ const PostsListPagination = ({}) => {
               previous
             />
           </PaginationItem>
-        )}
+        )} */}
         {/* <PaginationItem>
           <PaginationLink href="#">
             1
@@ -105,7 +105,7 @@ const PostsListPagination = ({}) => {
             last
           />
         </PaginationItem> */}
-        {pageInfo && pageInfo.hasNextPage && (
+        {/* {pageInfo && pageInfo.hasNextPage && (
           <PaginationItem>
             <PaginationLink
               href="#"
@@ -114,7 +114,7 @@ const PostsListPagination = ({}) => {
             />
           </PaginationItem>
         )}
-      </Pagination>
+      </Pagination> */}
     </div>
   )
 };
