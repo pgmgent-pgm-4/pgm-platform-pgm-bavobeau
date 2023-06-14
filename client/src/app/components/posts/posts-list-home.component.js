@@ -23,12 +23,13 @@ const PostsListHome = () => {
         <span className="visually-hidden">Loading...</span>
       </div>
     );
-    if (error) return <p>{error.toString()}</p>;
+
+    if (error) return <p>Error :{error.toString()}</p>;
 
     return (
       <div className="position-relative">
         <PostsListComponent posts={data.posts} />
-        <NavLink to={`/posts`} className="link-info position-absolute bottom-10 end-0">More Posts</NavLink>
+        <NavLink to={`/posts`} className="link-info position-absolute end-0">More Posts</NavLink>
       </div>
     )
   };

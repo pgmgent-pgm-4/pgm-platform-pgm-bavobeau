@@ -19,7 +19,7 @@ const ProgrammeDetailsPage = () => {
     if (error) return <p>{error.toString()}Error :</p>;
 
     return (
-      <BodyLayoutContainer props={"md"}>
+      <BodyLayoutContainer>
         <CourseDetailsComponent course={data.course} />
       </BodyLayoutContainer>
     );

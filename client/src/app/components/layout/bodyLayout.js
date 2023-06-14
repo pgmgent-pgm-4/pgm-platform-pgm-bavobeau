@@ -1,8 +1,8 @@
 import React from 'react';
 
-const BodyLayoutContainer = ({ children, props }) => {
+const BodyLayoutContainer = ({ children }) => {
   return (
-    <div className={`container-${props} my-5`}>
+    <div className={`container-md my-5`}>
       {children}
     </div>
   );
