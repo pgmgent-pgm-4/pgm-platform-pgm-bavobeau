@@ -11,3 +11,5 @@ export const FOUROFOUR = '/404';
 
 export const EDUCATION_PROGRAMME = '/programme';
 export const PROGRAMME_DETAILS = '/programme/:courseId';
+
+export const SERVICES = '/services';
