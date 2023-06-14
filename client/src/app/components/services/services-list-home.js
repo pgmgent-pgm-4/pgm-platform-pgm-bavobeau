@@ -3,7 +3,7 @@ import { services } from '../services'
 
 const ServicesListHome = () => {
   return (
-      <GridLayoutContainer>
+      <GridLayoutContainer amount={3}>
         {services && services.map(service => 
         <GridItemContainer card={service} adres="service" style="cover" />
         )}

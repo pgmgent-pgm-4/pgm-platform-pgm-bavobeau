@@ -13,3 +13,5 @@ export const EDUCATION_PROGRAMME = '/programme';
 export const PROGRAMME_DETAILS = '/programme/:courseId';
 
 export const SERVICES = '/services';
+
+export const TEAMS = '/teams';

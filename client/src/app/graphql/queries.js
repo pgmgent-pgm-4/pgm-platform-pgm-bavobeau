@@ -130,3 +130,25 @@ query getCourseById($courseId: ID!) {
   }
 }
 `;
+
+export const GET_ALL_TEAMMEMBERS = gql`
+query GetTeamMembersWithRelayCursor($first: Int = 20, $after: String = null) {
+  teamMembersRelayCursor: teamMembersConnection(first: $first, after: $after) {
+    pageInfo {
+      hasNextPage 
+      endCursor  
+    }
+    edges {
+      node {
+        id
+        firstName
+        lastName
+        jobTitle
+        memberType
+        picture {
+          url
+        }
+      }
+    }
+  }
+}`;
