@@ -1,4 +1,5 @@
 import { useQuery } from "@apollo/client";
+import { NavLink } from "react-router-dom";
 
 import { GET_ALL_COURSES } from "../../graphql";
 
@@ -19,19 +20,22 @@ const Programme = () => {
   return (
     <div className="container">
       {semesters.map(semester => (
-        <div key={semester} className="row row-cols-2">
-          <h2 className="col">{semester.replace("_"," ")}</h2>
-          <p className="col">studiepunten</p>
+        <>   
+          <div className="row">
+            <h2 className="col">{semester.replace("_"," ")}</h2>
+            <p className="col">studiepunten</p>
+          </div>      
             {data && data.courses
               .filter(item => item.semester === semester)
               .map(item => (
-                <>
+                <NavLink to={`/programme/${item.id}`} className="row">
                   <div className="col">{item.name}</div>
                   <div className="col">{item.studyPoints}</div>
-                </>
+                </NavLink>
               ))}
-          </div>
+          </>
       ))}
+      
     </div>
   );
 };

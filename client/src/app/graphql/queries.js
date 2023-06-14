@@ -115,8 +115,18 @@ query getCourses {
 `;
 
 export const GET_COURSE_BY_ID = gql`
-query MyQuery($semester: Semester = Semester_1) {
-  courses(where: {semester: $semester}) {
+query getCourseById($courseId: ID!) {
+  course(where: {id: $courseId}) {
+    id
     name
+    lecturers {
+      firstName
+      lastName
+    }
+    studyPoints
+    description
+    amountOfHoursPerWeek
+    ectsUrl
   }
-}`;
+}
+`;
