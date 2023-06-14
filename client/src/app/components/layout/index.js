@@ -14,5 +14,6 @@ export {
   PublicLayout,
   UserLayout,
   BodyLayoutContainer,
-  GridLayoutContainer
+  GridLayoutContainer,
+  GridItemContainer,
 };

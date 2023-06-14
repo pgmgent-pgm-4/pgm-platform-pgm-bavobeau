@@ -1,4 +1,4 @@
-import GridItemContainer from "../layout/GridItemLayout";
+import { GridItemContainer } from "../layout";
 
 const services = [
   {

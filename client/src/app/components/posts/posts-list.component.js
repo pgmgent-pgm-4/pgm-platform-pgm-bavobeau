@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
-import { GridLayoutContainer } from "../layout";
-import GridItemContainer from "../layout/GridItemLayout";
+import { GridLayoutContainer, GridItemContainer } from "../layout";
 
 const PostsListComponent = ({children, posts}) => {
   return (
