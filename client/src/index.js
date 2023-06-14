@@ -15,7 +15,7 @@ import App from './app';
 import * as AppRoutes from './app/routes';
 
 // Utilities
-import { CommunitiesPage, DashboardPage, HomePage, PostDetailsPage, PostsPage, ProfilePage, ProgrammePage, ProgrammeDetailsPage, Signin, Signup } from './app/pages';
+import { CommunitiesPage, DashboardPage, HomePage, PostDetailsPage, PostsPage, ProfilePage, ProgrammePage, ProgrammeDetailsPage, Signin, Signup, ServicePage } from './app/pages';
 import { AuthProvider, HygraphProvider } from './app/context';
 import { AuthLayout, PublicLayout, UserLayout } from './app/components/layout';
 
@@ -35,6 +35,7 @@ root.render(
                 <Route path={AppRoutes.COMMUNITIES} element={<CommunitiesPage />} /> 
                 <Route path={AppRoutes.EDUCATION_PROGRAMME} element={<ProgrammePage />} />
                 <Route path={AppRoutes.PROGRAMME_DETAILS} element={<ProgrammeDetailsPage />} />
+                <Route path={AppRoutes.SERVICES} element={<ServicePage />} />
               </Route> 
               <Route path="auth" element={<AuthLayout />}>
                 <Route index element ={<Navigate to={AppRoutes.AUTH_SIGN_IN} replace={true} />} />
