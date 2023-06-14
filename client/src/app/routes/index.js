@@ -10,3 +10,4 @@ export const USER_PROFILE = '/user/profile';
 export const FOUROFOUR = '/404';
 
 export const EDUCATION_PROGRAMME = '/programme';
+export const PROGRAMME_DETAILS = '/programme/:courseId';

@@ -7,6 +7,7 @@ import Signin from "./signin.page";
 import Signup from "./signup.page";
 import ProfilePage from "./profile.page";
 import ProgrammePage from "./programme.page";
+import ProgrammeDetailsPage from "./programme-details.page";
 
 export {
   CommunitiesPage,
@@ -18,4 +19,5 @@ export {
   Signup,
   ProfilePage,
   ProgrammePage,
+  ProgrammeDetailsPage
 }

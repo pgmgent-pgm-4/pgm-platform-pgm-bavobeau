@@ -97,3 +97,36 @@ query GetPostById ($postId: ID!) {
   }
 }
 `;
+
+export const GET_ALL_COURSES = gql`
+query getCourses {
+  courses(first: 25) {
+    id
+    name
+    studyPoints
+    amountOfHoursPerWeek
+    year
+    semester
+    period
+    description
+    ectsUrl
+  }
+}
+`;
+
+export const GET_COURSE_BY_ID = gql`
+query getCourseById($courseId: ID!) {
+  course(where: {id: $courseId}) {
+    id
+    name
+    lecturers {
+      firstName
+      lastName
+    }
+    studyPoints
+    description
+    amountOfHoursPerWeek
+    ectsUrl
+  }
+}
+`;
