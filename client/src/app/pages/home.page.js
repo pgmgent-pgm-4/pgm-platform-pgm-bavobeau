@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 import { PostsListHome } from "../components/posts";
-import { Services } from "../components/services";
+import { ServicesListHome } from "../components/services";
 
 const HomePage = () => {
   return (
@@ -21,7 +21,7 @@ const HomePage = () => {
       <h2 className="mt-5 mb-2">Recent posts</h2>
       <PostsListHome></PostsListHome>
       <h2 className="mt-5 mb-2">Our services</h2>
-      <Services></Services>
+      <ServicesListHome></ServicesListHome>
     </div>
   );
 };

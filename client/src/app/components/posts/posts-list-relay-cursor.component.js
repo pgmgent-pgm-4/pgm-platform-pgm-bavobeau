@@ -10,9 +10,9 @@ import { GET_POSTS_WITH_RELAY_CURSOR } from '../../graphql';
 import PostsListComponent from "./posts-list.component";
 
 const PostsListRelayCursor = ({}) => {
-  const { data, loading, fetchMore } = useQuery(GET_POSTS_WITH_RELAY_CURSOR, {
+  const { data, loading, fetchMore, error } = useQuery(GET_POSTS_WITH_RELAY_CURSOR, {
     variables: {
-      first: 10,
+      first: 18,
       after: null,
     },
   });
@@ -29,23 +29,43 @@ const PostsListRelayCursor = ({}) => {
     return () => {}
   }, [data])
 
+  const gqlResultAsJSX = () => {
+    if (loading) return (
+      <div className="spinner-border" role="status">
+        <strong>Loading...</strong>
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    );
+
+    if (error) return <p>Error :{error.toString()}</p>;
+
   return (
-    <div>
-      <PostsListComponent posts={nodes} />
-      <Button color="primary" onClick={() => {
+    <>
+      <PostsListComponent posts={nodes}>
+        <Button className='mx-auto' color="primary" onClick={() => {
         if (pageInfo.hasNextPage) {
           fetchMore({
             variables: {
-              first: 10,
+              first: 9,
               after: pageInfo.endCursor,
             },
           });
         }
       }}>
         Load more...
-      </Button>
-    </div>
+        </Button>
+      </PostsListComponent>
+    </>
   )
+  };
+  
+  return (
+  <>
+    {
+      gqlResultAsJSX()
+    }
+  </>
+)
 };
 
 export default PostsListRelayCursor;

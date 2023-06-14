@@ -1,5 +1,5 @@
-import Services from "./services";
+import ServicesListHome from "./services-list-home.js";
 
 export {
-  Services
+  ServicesListHome,
 }

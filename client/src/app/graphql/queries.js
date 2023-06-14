@@ -33,7 +33,7 @@ query MyQuery($first: Int = 3) {
 `;
 
 export const GET_POSTS_WITH_RELAY_CURSOR = gql`
-query GetPostsWithRelayCursor($first: Int = 20, $after: String = null) {
+query GetPostsWithRelayCursor($first: Int = 18, $after: String = null) {
   postsConnectionRelayCursor: postsConnection(first: $first, after: $after) {
     pageInfo {
       hasNextPage 
@@ -50,7 +50,7 @@ query GetPostsWithRelayCursor($first: Int = 20, $after: String = null) {
 `;
 
 export const GET_POSTS_WITH_PAGINATION = gql`
-query GetPostsWithPagination($first: Int = 20, $skip: Int = 0) {
+query GetPostsWithPagination($first: Int = 18, $skip: Int = 0) {
   postsConnectionPagination: postsConnection(first: $first, skip: $skip) {
     pageInfo {
       hasNextPage
