@@ -110,11 +110,15 @@ query getCourseById($courseId: ID!) {
 `;
 
 export const GET_ALL_TEAMMEMBERS = gql`
-query GetTeamMembersWithRelayCursor($first: Int = 20, $after: String = null) {
-  teamMembersConnectionRelayCursor: teamMembersConnection(first: $first, after: $after) {
+query GetAllTeamMembers($first: Int = 20, $after: String = null, $memberType_in: [TeamMemberType] = [Student, Lecturer, Alumni]) {
+  teamMembersConnectionRelayCursor: teamMembersConnection(
+    first: $first
+    after: $after
+    where: {memberType_in: $memberType_in}
+  ) {
     pageInfo {
-      hasNextPage 
-      endCursor  
+      hasNextPage
+      endCursor
     }
     edges {
       node {
@@ -128,7 +132,8 @@ query GetTeamMembersWithRelayCursor($first: Int = 20, $after: String = null) {
       }
     }
   }
-}`;
+}
+`;
 
 export const GET_TEAMMEMBER_BY_ID = gql`
 query GetTeamMemberById($teamId: ID = "") {
