@@ -16,7 +16,7 @@ const ServicesList = () => {
                 </p>
               </div>
               <div className='col'>
-                {service.thumbnailUrl}
+                <img src={service.thumbnailUrl} alt={service.title}></img>
               </div>
               </>
             )
@@ -24,7 +24,7 @@ const ServicesList = () => {
           return (
             <>
               <div className='col'>
-                {service.thumbnailUrl}
+                <img src={service.thumbnailUrl} alt={service.title}></img>
               </div>
               <div className='col'>
                 <h3>
