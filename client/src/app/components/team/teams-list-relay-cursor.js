@@ -21,20 +21,19 @@ const TeamsListRelayCursor = ({}) => {
   useEffect(() => {
     if (!!data) {
       console.log(data);
-      setNodes(data.teamMembersRelayCursor.edges.map((edge) => edge.node));
-      setPageInfo(data.teamMembersRelayCursor.pageInfo);
+      setNodes(data.teamMembersConnectionRelayCursor.edges.map((edge) => edge.node));
+      setPageInfo(data.teamMembersConnectionRelayCursor.pageInfo);
     }
     return () => {}
   }, [data])
 
   const gqlResultAsJSX = () => {
-    if (loading)
-      return (
-        <div className="spinner-border" role="status">
-          <strong>Loading...</strong>
-          <span className="visually-hidden">Loading...</span>
-        </div>
-      );
+    if (loading) return (
+      <div className="spinner-border" role="status">
+        <strong>Loading...</strong>
+        <span className="visually-hidden">Loading...</span>
+      </div>
+    );
 
     if (error) return <p>Error :{error.toString()}</p>;
 

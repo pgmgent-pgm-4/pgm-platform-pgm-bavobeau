@@ -111,7 +111,7 @@ query getCourseById($courseId: ID!) {
 
 export const GET_ALL_TEAMMEMBERS = gql`
 query GetTeamMembersWithRelayCursor($first: Int = 20, $after: String = null) {
-  teamMembersRelayCursor: teamMembersConnection(first: $first, after: $after) {
+  teamMembersConnectionRelayCursor: teamMembersConnection(first: $first, after: $after) {
     pageInfo {
       hasNextPage 
       endCursor  
@@ -126,6 +126,19 @@ query GetTeamMembersWithRelayCursor($first: Int = 20, $after: String = null) {
           url
         }
       }
+    }
+  }
+}`;
+
+export const GET_TEAMMEMBER_BY_ID = gql`
+query GetTeamMemberById($teamId: ID = "") {
+  teamMember(where: {id: $teamId}) {
+    firstName
+    lastName
+    jobTitle
+    memberType
+    picture {
+      url
     }
   }
 }`;
