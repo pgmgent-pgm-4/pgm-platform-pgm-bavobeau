@@ -147,3 +147,22 @@ query GetTeamMemberById($teamId: ID = "") {
     }
   }
 }`;
+
+export const GET_PORTFOLIO_BY_ID = gql`
+query GetProjectById($id: ID = "") {
+  projects(where: {authUsers_some: {id: $id}}) {
+    title
+    body {
+      markdown
+    }
+    coverImage
+    description
+    updatedAt
+    authUsers {
+      username
+      id
+    }
+  }
+}
+
+`;
