@@ -164,5 +164,24 @@ query GetProjectById($id: ID = "") {
     }
   }
 }
-
 `;
+
+export const GET_PROFILE_BY_USER = gql`
+query GetAuthUser($userId: ID!) {
+  authUser(where: {id: $userId}) {
+    username
+    email
+    avatar {
+      url
+    }
+    profile {
+      firstName
+      lastName
+      dayOfBirth
+      geoLocation {
+        latitude
+        longitude
+      }
+    }
+  }
+}`;
