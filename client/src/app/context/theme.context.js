@@ -1,9 +1,9 @@
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from "react";
 
 const ThemeContext = createContext();
 const useThemeContext = () => useContext(ThemeContext);
 
-const ThemeProvider = ({children}) => {
+const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(true);
 
   const handleThemeChange = (isDarkMode) => {
@@ -11,14 +11,10 @@ const ThemeProvider = ({children}) => {
   };
 
   return (
-    <ThemeContext.Provider value={{isDarkMode, handleThemeChange}}>
+    <ThemeContext.Provider value={{ isDarkMode, handleThemeChange }}>
       {children}
     </ThemeContext.Provider>
-  )
+  );
 };
 
-export {
-  ThemeContext,
-  ThemeProvider,
-  useThemeContext
-};
+export { ThemeContext, ThemeProvider, useThemeContext };

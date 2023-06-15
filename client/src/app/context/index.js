@@ -9,5 +9,5 @@ export {
   useAuth,
   ThemeContext,
   ThemeProvider,
-  useThemeContext
-}
+  useThemeContext,
+};

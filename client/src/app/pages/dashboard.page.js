@@ -9,7 +9,9 @@ const DashboardPage = () => {
     <>
       <UserNavigation />
       <BodyLayoutContainer>
-        <h1 className="text-3xl font-bold underline">Dashboard { currentUser.username }</h1>
+        <h1 className="text-3xl font-bold underline">
+          Dashboard {currentUser.username}
+        </h1>
         <PortfolioEdit userId={currentUser.id} />
       </BodyLayoutContainer>
     </>

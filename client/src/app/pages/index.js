@@ -26,4 +26,4 @@ export {
   ServicePage,
   TeamsPage,
   TeamDetailPage,
-}
+};

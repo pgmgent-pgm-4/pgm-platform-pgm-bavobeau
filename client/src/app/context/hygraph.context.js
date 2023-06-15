@@ -9,7 +9,7 @@ import {
 } from "@apollo/client";
 import { relayStylePagination } from "@apollo/client/utilities";
 
-import { settings } from '../config';
+import { settings } from "../config";
 
 // HTTP link to the GraphQL resource
 const httpLink = new HttpLink({
@@ -21,7 +21,7 @@ const authMiddleware = new ApolloLink((operation, forward) => {
     headers: {
       ...headers,
       authorization: `Bearer ${settings.HYGRAPH_ACCESS_TOKEN}`,
-    }
+    },
   }));
   return forward(operation);
 });
@@ -31,23 +31,17 @@ const client = new ApolloClient({
   link: concat(authMiddleware, httpLink),
   cache: new InMemoryCache({
     typePolicies: {
-      Query: {  
-        fields: {  
-          postsConnection: relayStylePagination(),  
-        },  
-      },  
+      Query: {
+        fields: {
+          postsConnection: relayStylePagination(),
+        },
+      },
     },
   }),
 });
 
-const HygraphProvider = ({children}) => {
-  return (
-    <ApolloProvider client={client}>
-      {children}
-    </ApolloProvider>
-  );
+const HygraphProvider = ({ children }) => {
+  return <ApolloProvider client={client}>{children}</ApolloProvider>;
 };
 
-export {
-  HygraphProvider,
-};
+export { HygraphProvider };

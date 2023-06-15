@@ -1,17 +1,17 @@
 import { useQuery } from "@apollo/client";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 import { GET_COURSE_BY_ID } from "../graphql";
 import { CourseDetailsComponent } from "../components/programme";
 import { BodyLayoutContainer } from "../components/layout";
 
 const ProgrammeDetailsPage = () => {
   let params = useParams();
-  let courseId = (params.courseId);
+  let courseId = params.courseId;
 
   const { loading, error, data } = useQuery(GET_COURSE_BY_ID, {
     variables: {
-      courseId: courseId
-    }
+      courseId: courseId,
+    },
   });
 
   const gqlResult = () => {
@@ -25,11 +25,7 @@ const ProgrammeDetailsPage = () => {
     );
   };
 
-  return (
-    <>
-      {gqlResult()}
-    </>
-  )
+  return <>{gqlResult()}</>;
 };
 
 export default ProgrammeDetailsPage;

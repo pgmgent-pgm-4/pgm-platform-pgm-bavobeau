@@ -7,5 +7,5 @@ export {
   PostsListComponent,
   PostDetailsComponent,
   PostsListRelayCursor,
-  PostsListHome
-}
+  PostsListHome,
+};

@@ -2,7 +2,6 @@ import { BodyLayoutContainer, UserNavigation } from "../components/layout";
 import { useAuth } from "../context";
 import { ProfileDetail } from "../components/profile";
 
-
 const ProfilePage = () => {
   const { currentUser } = useAuth();
 
@@ -10,8 +9,10 @@ const ProfilePage = () => {
     <>
       <UserNavigation />
       <BodyLayoutContainer>
-        <h1 className="text-3xl font-bold underline">User: { currentUser.username }</h1>
-        <ProfileDetail userId={currentUser.id}/>
+        <h1 className="text-3xl font-bold underline">
+          User: {currentUser.username}
+        </h1>
+        <ProfileDetail userId={currentUser.id} />
       </BodyLayoutContainer>
     </>
   );

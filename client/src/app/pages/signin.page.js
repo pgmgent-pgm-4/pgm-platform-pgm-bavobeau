@@ -15,14 +15,14 @@ import {
   Col,
   Row,
   FormGroup,
-  Label
+  Label,
 } from "reactstrap";
 import { useAuth } from "../context";
 
 const Signin = () => {
   const [formData, setFormData] = useState({
-    txtUsername: '',
-    txtPassword: '',
+    txtUsername: "",
+    txtPassword: "",
   });
 
   const { signInWithEmailAndPassword } = useAuth();
@@ -30,14 +30,15 @@ const Signin = () => {
   const handleOnChange = async (ev) => {
     setFormData({
       ...formData,
-      [ev.target.name]: (ev.target.type !== 'checkbox') ? ev.target.value : ev.target.checked,
-    })
+      [ev.target.name]:
+        ev.target.type !== "checkbox" ? ev.target.value : ev.target.checked,
+    });
   };
 
   const handleSubmit = async (ev) => {
     ev.preventDefault();
 
-    signInWithEmailAndPassword(formData.txtUsername, formData.txtPassword)
+    signInWithEmailAndPassword(formData.txtUsername, formData.txtPassword);
   };
 
   return (
@@ -46,22 +47,24 @@ const Signin = () => {
         <Row>
           <FormGroup>
             <Label for="txtUsername">Username</Label>
-            <Input 
+            <Input
               id="txtUsername"
               name="txtUsername"
               placeholder="Write your username"
               type="text"
-              onChange={handleOnChange} value={formData.txtUsername}
+              onChange={handleOnChange}
+              value={formData.txtUsername}
             />
           </FormGroup>
           <FormGroup>
             <Label for="txtPassword">Password</Label>
-            <Input 
+            <Input
               id="txtPassword"
               name="txtPassword"
               placeholder="Write your password"
               type="password"
-              onChange={handleOnChange} value={formData.txtPassword}
+              onChange={handleOnChange}
+              value={formData.txtPassword}
             />
           </FormGroup>
         </Row>

@@ -1,9 +1,9 @@
 // Import external modules
 import { useQuery } from "@apollo/client";
-import { ListGroup, ListGroupItem } from 'reactstrap';
+import { ListGroup, ListGroupItem } from "reactstrap";
 
 // Import custom modules
-import { GET_ALL_COMMUNITIES } from '../../graphql';
+import { GET_ALL_COMMUNITIES } from "../../graphql";
 
 const CommunitiesList = () => {
   const { loading, error, data } = useQuery(GET_ALL_COMMUNITIES);
@@ -14,28 +14,22 @@ const CommunitiesList = () => {
 
     return (
       <div className="card communities-list">
-        <div className="card-header">
-          Communities
-        </div>
+        <div className="card-header">Communities</div>
         <ListGroup>
-        {data && data.communities && data.communities.map(community => 
-          <ListGroupItem key={ community.id }>
-            <h2>{ community.name }</h2>
-            <p>{ community.description }</p>
-          </ListGroupItem>
-        )}
+          {data &&
+            data.communities &&
+            data.communities.map((community) => (
+              <ListGroupItem key={community.id}>
+                <h2>{community.name}</h2>
+                <p>{community.description}</p>
+              </ListGroupItem>
+            ))}
         </ListGroup>
       </div>
-    )
+    );
   };
 
-  return (
-    <>
-      {
-        gqlResultAsJSX()
-      }
-    </>
-  )
+  return <>{gqlResultAsJSX()}</>;
 };
 
 export default CommunitiesList;

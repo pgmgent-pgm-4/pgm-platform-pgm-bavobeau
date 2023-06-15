@@ -1,5 +1,3 @@
-const PortfolioList = () => {
-
-};
+const PortfolioList = () => {};
 
 export default PortfolioList;

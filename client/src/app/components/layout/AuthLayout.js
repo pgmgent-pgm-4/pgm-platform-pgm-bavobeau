@@ -1,15 +1,12 @@
-import { Outlet } from 'react-router-dom'; 
+import { Outlet } from "react-router-dom";
 
-const AuthLayout = ({
-  children,
-  ...rest
-}) => {
+const AuthLayout = ({ children, ...rest }) => {
   return (
     <>
       <main>
-        <Outlet/>
+        <Outlet />
       </main>
-    </>  
+    </>
   );
 };
 

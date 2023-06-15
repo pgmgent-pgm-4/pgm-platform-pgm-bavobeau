@@ -1,5 +1,3 @@
-const PortfolioDetail = () => {
-
-};
+const PortfolioDetail = () => {};
 
 export default PortfolioDetail;
