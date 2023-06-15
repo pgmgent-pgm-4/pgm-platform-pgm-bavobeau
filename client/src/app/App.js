@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 
-import { useAuth } from './context';
+import { ThemeProvider } from './context';
 
 import './App.scss';
 
@@ -21,9 +21,11 @@ function App() {
   // }, [currentUser]);
 
   return (
-    <div className="app">  
-      <Outlet />    
-    </div>
+    <ThemeProvider>
+      <div className="app">
+        <Outlet />    
+      </div>
+    </ThemeProvider>
   );
 }
 
