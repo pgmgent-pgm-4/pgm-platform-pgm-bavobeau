@@ -15,3 +15,4 @@ export const PROGRAMME_DETAILS = '/programme/:courseId';
 export const SERVICES = '/services';
 
 export const TEAMS = '/teams';
+export const TEAM_DETAIL = '/teams/:teamId';

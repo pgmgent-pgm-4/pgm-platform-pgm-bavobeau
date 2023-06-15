@@ -10,6 +10,7 @@ import ProgrammePage from "./programme.page";
 import ProgrammeDetailsPage from "./programme-details.page";
 import ServicePage from "./service.page";
 import TeamsPage from "./teams.page";
+import TeamDetailPage from "./team-details.page";
 
 export {
   CommunitiesPage,
@@ -24,4 +25,5 @@ export {
   ProgrammeDetailsPage,
   ServicePage,
   TeamsPage,
+  TeamDetailPage,
 }
