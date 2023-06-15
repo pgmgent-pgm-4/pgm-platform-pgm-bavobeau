@@ -49,28 +49,6 @@ query GetPostsWithRelayCursor($first: Int = 18, $after: String = null) {
 }
 `;
 
-export const GET_POSTS_WITH_PAGINATION = gql`
-query GetPostsWithPagination($first: Int = 18, $skip: Int = 0) {
-  postsConnectionPagination: postsConnection(first: $first, skip: $skip) {
-    pageInfo {
-      hasNextPage
-      endCursor
-      pageSize
-      hasPreviousPage
-    }
-    aggregate {
-      count
-    }
-    edges {
-      node {
-        id
-        title
-      }
-    }
-  }
-}
-`;
-
 export const GET_POST_DETAILS = gql`
 query GetPostById ($postId: ID!) {
   post(where: {id: $postId}) {
@@ -130,3 +108,24 @@ query getCourseById($courseId: ID!) {
   }
 }
 `;
+
+export const GET_ALL_TEAMMEMBERS = gql`
+query GetTeamMembersWithRelayCursor($first: Int = 20, $after: String = null) {
+  teamMembersRelayCursor: teamMembersConnection(first: $first, after: $after) {
+    pageInfo {
+      hasNextPage 
+      endCursor  
+    }
+    edges {
+      node {
+        id
+        firstName
+        lastName
+        memberType
+        picture {
+          url
+        }
+      }
+    }
+  }
+}`;

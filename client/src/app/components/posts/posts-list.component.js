@@ -3,7 +3,7 @@ import { GridLayoutContainer, GridItemContainer } from "../layout";
 
 const PostsListComponent = ({children, posts}) => {
   return (
-      <GridLayoutContainer>
+      <GridLayoutContainer amount={3}>
         {posts && posts.map((post) => (
           <GridItemContainer card={post} adres="posts" />
           ))}

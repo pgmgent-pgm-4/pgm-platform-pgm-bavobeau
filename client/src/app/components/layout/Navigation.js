@@ -25,9 +25,9 @@ const routes = [
     path: '/services'
   },
   {
-    title: 'Team',
+    title: 'Teams',
     type: 'internal',
-    path: '/team'
+    path: '/teams'
   }
 ];
 

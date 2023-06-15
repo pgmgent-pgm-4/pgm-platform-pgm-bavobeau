@@ -6,6 +6,7 @@ import UserLayout from "./UserLayout";
 import BodyLayoutContainer from "./BodyLayout";
 import GridLayoutContainer from "./GridLayout";
 import GridItemContainer from "./GridItemLayout";
+import UserItemContainer from "./GridUserLayout";
 
 export {
   AuthLayout,
@@ -16,4 +17,5 @@ export {
   BodyLayoutContainer,
   GridLayoutContainer,
   GridItemContainer,
+  UserItemContainer,
 };
