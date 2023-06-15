@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 
 import { PostsListHome } from "../components/posts";
 import { ServicesListHome } from "../components/services";
+import { BodyLayoutContainer } from "../components/layout";
 
 const HomePage = () => {
   return (
-    <div className="container py-4">
+    <BodyLayoutContainer>
       <div className="p-5 mb-4 bg-light rounded-3">
         <div className="container-fluid py-5">
           <h1 className="display-5 fw-bold">Graduaat Programmeren</h1>
@@ -22,7 +23,7 @@ const HomePage = () => {
       <PostsListHome></PostsListHome>
       <h2 className="mt-5 mb-2">Our services</h2>
       <ServicesListHome></ServicesListHome>
-    </div>
+    </BodyLayoutContainer>
   );
 };
 

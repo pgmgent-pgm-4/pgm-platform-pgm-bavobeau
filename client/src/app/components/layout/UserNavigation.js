@@ -13,7 +13,7 @@ const UserNavigation = () => {
   const { signOut } = useAuth();
   return (
     <header className="header">
-      <Navbar color="light" expand="md" light>
+      <Navbar color="light" expand="md">
         <NavbarBrand tag={RRNavLink} to="/home">
           PGM Platform
         </NavbarBrand>

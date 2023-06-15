@@ -5,6 +5,7 @@ import { DropdownItem, DropdownMenu, DropdownToggle, NavbarText, Nav, NavItem, N
 // Import custom modules
 import * as routes from '../../routes';
 import { useAuth } from '../../context/auth.context';
+import ThemeToggle from '../theme/ThemeToggle';
 
 const UserContextNavigation = () => {
   const { currentUser, signOut } = useAuth();
@@ -34,6 +35,9 @@ const UserContextNavigation = () => {
               </DropdownItem>
               <DropdownItem>
                 <NavLink tag={RRNavLink} to={routes.USER_PROFILE}>Profile</NavLink>
+              </DropdownItem>
+              <DropdownItem>
+                <ThemeToggle />
               </DropdownItem>
               <DropdownItem divider />
               <DropdownItem>

@@ -1,16 +1,17 @@
 import { NavLink as RRNavLink } from 'react-router-dom';
 import { Navbar, NavbarBrand, NavLink, NavbarToggler, Collapse } from 'reactstrap';
+import { useThemeContext } from '../../context';
 
 // Custom components
 import Navigation from './Navigation';
 
 const Header = () => {
+  const {isDarkMode} = useThemeContext();
   return (
     <header className="header">
       <Navbar
-        color="light"
+        color={isDarkMode ? "light" : "dark"}
         expand="md"
-        light
       >
         <NavbarBrand tag={RRNavLink} to="/home">
           PGM Platform
