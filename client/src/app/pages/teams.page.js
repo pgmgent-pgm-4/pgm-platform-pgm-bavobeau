@@ -7,7 +7,7 @@ const TeamsPage = () => {
       <h1 className="text-3xl font-bold"><u>The PGM Team</u></h1>
       <TeamsListRelayCursor />
     </BodyLayoutContainer>
-  );
+  )
 };
 
 export default TeamsPage;

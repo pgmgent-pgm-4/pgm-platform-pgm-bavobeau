@@ -7,7 +7,7 @@ import { Button } from "reactstrap";
 import { GET_ALL_TEAMMEMBERS } from "../../graphql";
 import { TeamsListComponent } from ".";
 
-const TeamsListRelayCursor = () => {
+const TeamsListRelayCursor = ({}) => {
   const { data, loading, fetchMore, error } = useQuery(GET_ALL_TEAMMEMBERS, {
     variables: {
       first: 20,
@@ -42,7 +42,7 @@ const TeamsListRelayCursor = () => {
       <>
         <TeamsListComponent teams={nodes}>
           <Button className='mx-auto' color="primary" onClick={() => {
-          if (pageInfo && pageInfo.hasNextPage) {
+          if (pageInfo.hasNextPage) {
             fetchMore({
               variables: {
                 first: 10,
