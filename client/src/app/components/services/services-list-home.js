@@ -5,7 +5,7 @@ const ServicesListHome = () => {
   return (
       <GridLayoutContainer amount={3}>
         {services && services.map(service => 
-        <GridItemContainer card={service} adres="service" style="cover" />
+        <GridItemContainer card={service} adres="services" style="cover" />
         )}
       </GridLayoutContainer>
   )
